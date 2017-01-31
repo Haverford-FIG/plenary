@@ -1,0 +1,23 @@
+{
+  "name": "hansard",
+  "homepage": "https://haverford-fig.github.io/plenary",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "node-sass": "^4.4.0",
+    "nodemon": "^1.11.0",
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "scripts": {
+    "build-css": "node-sass --include-path scss src/scss/haverford.scss src/public/css/haverford.css",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  }
+}

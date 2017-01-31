@@ -1,0 +1,66 @@
+#links {
+  @include outer-container();
+}
+
+#navbar-content {
+  @include outer-container();
+  display: block;
+}
+
+.banner {
+  text-align: center;
+  background-color: $primary-darkest;
+  color: white;
+
+  h1 {
+    font-size: 5 * $base-font-size;
+  }
+
+  p {
+    font-size: 1.5 * $base-font-size;
+    text-transform: lowercase;
+  }
+}
+
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.link-row {
+  @include span-columns(12);
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  @include span-columns(4 of 12);
+  margin: 0;
+  padding: 0;
+  // padding: 0;
+
+  a {
+    font-size: 1.2 * $base-font-size;
+    text-decoration: underline;
+  }
+}
+
+
+
+.updates {
+  @include outer-container();
+}
+
+.updates-row {
+  @include span-columns(12);
+  margin-top: 10px;
+}
+
+.updates-blog {
+  @include span-columns(6 of 12);
+  margin-top: 20px;
+  
+  h3 {
+    text-align: center;
+  }
+}

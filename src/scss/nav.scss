@@ -1,0 +1,39 @@
+nav {
+  #navbar-content {
+    @include outer-container;
+    border-bottom: 6px solid $primary;
+  }
+
+  height: 80px;
+
+  .logo {
+    display: inline-block;
+    height: 80px;
+    vertical-align: middle;
+  }
+
+  img {
+    height: 40px;
+    margin: 15px 15px 0 0;
+    float: left;
+  }
+
+  li {
+    display: inline;
+    margin-left: 20px;
+  }
+
+  a {
+    line-height: 80px;
+    text-transform: uppercase;
+    color: black;
+  }
+
+  .logo {
+    float: left;
+  }
+
+  .items {
+    float: right;
+  }
+}
