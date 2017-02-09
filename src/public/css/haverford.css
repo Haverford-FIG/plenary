@@ -611,6 +611,7 @@ nav {
     max-width: 1020px;
     margin-left: auto;
     margin-right: auto;
+    height: 100%;
     border-bottom: 6px solid #c60f13; }
     nav #navbar-content::after {
       clear: both;
@@ -619,20 +620,19 @@ nav {
   nav .logo {
     display: inline-block;
     height: 80px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    float: left; }
   nav img {
     height: 40px;
     margin: 15px 15px 0 0;
     float: left; }
   nav li {
     display: inline;
-    margin-left: 20px; }
-  nav a {
     line-height: 80px;
-    text-transform: uppercase;
+    margin-left: 20px;
+    text-transform: uppercase; }
+  nav a {
     color: black; }
-  nav .logo {
-    float: left; }
   nav .items {
     float: right; }
 
@@ -646,9 +646,16 @@ nav {
   .updates h1 {
     text-align: center; }
 
+.speech-container hr {
+  display: block; }
+  .speech-container hr::after {
+    clear: both;
+    content: "";
+    display: block; }
+
 .speech {
-  display: block;
-  margin-top: 30px; }
+  margin-top: 30px;
+  display: block; }
   .speech::after {
     clear: both;
     content: "";
@@ -679,6 +686,41 @@ nav {
   text-align: center; }
   .quorumCounter:last-child {
     margin-right: 0; }
+
+.selector {
+  height: 80px; }
+  .selector .selectorContent {
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 6px solid #c60f13;
+    height: 100%; }
+    .selector .selectorContent::after {
+      clear: both;
+      content: "";
+      display: block; }
+  .selector .logo {
+    display: inline-block;
+    height: 80px;
+    vertical-align: middle; }
+  .selector button {
+    text-transform: uppercase; }
+  .selector button:hover {
+    background-color: #c60f13;
+    cursor: default; }
+  .selector img {
+    height: 40px;
+    margin: 15px 15px 0 0;
+    float: left; }
+  .selector li {
+    display: inline;
+    line-height: 80px;
+    margin-right: 20px;
+    text-transform: uppercase; }
+  .selector a {
+    color: black; }
+  .selector .items {
+    float: left; }
 
 main {
   max-width: 1020px;

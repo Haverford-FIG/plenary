@@ -16,7 +16,8 @@
 
 .speech {
   margin-top: 30px;
-  
+  @include row();
+
   .metadata {
     @include span-columns(3);
   }

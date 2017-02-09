@@ -2,8 +2,9 @@
 @import 'libraries/bourbon/bourbon';
 @import 'libraries/neat/neat';
 @import 'libraries/base/base';
-@import 'nav.scss';
-@import 'updates.scss';
-@import 'quorum.scss';
-@import 'app.scss';
+@import 'nav';
+@import 'updates';
+@import 'quorum';
+@import 'selector';
+@import 'app';
 // @import 'grid';

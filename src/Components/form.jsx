@@ -54,30 +54,41 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit} >
-        <label>
-          Name:
-          <input onChange={this.handleChange} type="text" name="speaker" />
-        </label>
-        <label>
-          Class Year:
-          <input onChange={this.handleChange} type="text" name="classYear" />
-        </label>
-        <label>
-          Email:
-          <input onChange={this.handleChange} type="text" name="email" />
-        </label>
-        <label>
-          Content:
-          <textarea
-              onChange={this.handleChange}
-              type="text"
-              name="content"
-              value={this.state.value}
-          />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+      <section className="formContainer">
+        <div className="selector">
+          <div className="selectorContent">
+            <ul className="items">
+              <li><button>Speech</button></li>
+              <li>Amendment</li>
+              <li>Procedure</li>
+            </ul>
+          </div>
+        </div>
+        <form onSubmit={this.handleSubmit} >
+          <label>
+            Name:
+            <input onChange={this.handleChange} type="text" name="speaker" />
+          </label>
+          <label>
+            Class Year:
+            <input onChange={this.handleChange} type="text" name="classYear" />
+          </label>
+          <label>
+            Email:
+            <input onChange={this.handleChange} type="text" name="email" />
+          </label>
+          <label>
+            Content:
+            <textarea
+                onChange={this.handleChange}
+                type="text"
+                name="content"
+                value={this.state.value}
+            />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
 
     );
   }
