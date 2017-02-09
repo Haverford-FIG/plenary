@@ -1,22 +1,30 @@
 .updates {
-  @include outer-container;
-  margin-top: 20px;
+  @include span-columns(9);
+  // margin-top: 50px;
 
   h1 {
     text-align: center;
   }
 
-  .update {
-    @include span-columns(12);
+}
+
+.speech-container {
+  hr {
+    @include row();
   }
 }
 
 .speech {
+  margin-top: 30px;
+  
   .metadata {
     @include span-columns(3);
   }
 
   .content {
     @include span-columns(9);
+    font-size: 18px;
   }
+
+
 }

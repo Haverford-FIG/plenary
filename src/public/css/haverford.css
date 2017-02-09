@@ -637,36 +637,55 @@ nav {
     float: right; }
 
 .updates {
-  max-width: 1020px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px; }
-  .updates::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .updates h1 {
-    text-align: center; }
-  .updates .update {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .updates .update:last-child {
-      margin-right: 0; }
-
-.speech .metadata {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .speech .metadata:last-child {
-    margin-right: 0; }
-
-.speech .content {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 74.41059%; }
-  .speech .content:last-child {
+  .updates:last-child {
     margin-right: 0; }
+  .updates h1 {
+    text-align: center; }
+
+.speech {
+  display: block;
+  margin-top: 30px; }
+  .speech::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .speech .metadata {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .speech .metadata:last-child {
+      margin-right: 0; }
+  .speech .content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    font-size: 18px; }
+    .speech .content:last-child {
+      margin-right: 0; }
+
+.quorumCounter {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  padding: 20px 20px 50px 20px;
+  background-color: #ddd;
+  text-align: center; }
+  .quorumCounter:last-child {
+    margin-right: 0; }
+
+main {
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px; }
+  main::after {
+    clear: both;
+    content: "";
+    display: block; }

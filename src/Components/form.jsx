@@ -6,7 +6,10 @@ const database = Firebase.database();
 class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = {content: ""};
+    this.state = {
+      content: "",
+      error: ""
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -26,11 +29,27 @@ class Form extends Component {
     }
     console.log("Creating a new speech: ", newSpeech);
     const newSpeechKey = database.ref().child('speeches').push().key;
-    const updates = {
-      ['/speeches/' + newSpeechKey]: newSpeech
-    };
+    const updates = { ['/speeches/' + newSpeechKey]: newSpeech };
 
     database.ref().update(updates);
+    this.setState({
+      speaker: "",
+      classYear: "",
+      email: "",
+      content: ""
+    });
+    /* this.resetForm(() => {
+     *   console.log("State is now: ", this.state);
+     * }).bind(this);*/
+  }
+
+  resetForm(callback) {
+    this.setState({
+      speaker: "",
+      classYear: "",
+      email: "",
+      content: ""
+    }, callback());
   }
 
   render() {

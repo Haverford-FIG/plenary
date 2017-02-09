@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './Components/navbar';
 import Updates from './Components/updates';
+import Quorum from './Components/quorum';
 import logo from './logo.svg';
 import './public/css/haverford.css';
 
@@ -9,7 +10,10 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <Updates />
+        <main>
+          <Quorum />
+          <Updates />
+        </main>
       </div>
     );
   }
