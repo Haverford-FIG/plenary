@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Speech from './speech';
 import Form from './form';
+import Amendment from './amendment';
 import Firebase from '../Firebase';
 
 const database = Firebase.database();
@@ -25,18 +26,33 @@ class Updates extends Component {
 
   render() {
     const speeches = this.state.speeches.map((u) => {
+      const update = (() => {
+        switch(u.formType) {
+          case "Speech":
+            return <Speech
+                       speaker={u.speaker}
+                       classYear={u.classYear}
+                       content={u.content}
+                   />;
+          case "Amendment":
+            return <Amendment
+                       speaker={u.speaker}
+                       classYear={u.classYear}
+                       original={u.original}
+                       newText={u.newText}
+                   />;
+          default:
+            return <Speech />;
+        }
+      })();
       return (
         <section className="speech-container">
-          <Speech
-              speaker={u.speaker}
-              classYear={u.classYear}
-              email={u.email}
-              content={u.content}
-          />
+          {update}
           <hr />
         </section>
       );
     });
+    console.log(speeches);
     return(
       <section className="updates">
         <h1>Live Updates from Plenary</h1>

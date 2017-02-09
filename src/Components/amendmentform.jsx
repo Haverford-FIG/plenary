@@ -7,7 +7,7 @@ class AmendmentForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      speaker: "Amendment",
+      speaker: "",
       classYear: "",
       email: "",
       original: "",
@@ -27,10 +27,12 @@ class AmendmentForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const newSpeech = {
+      formType: "Amendment",
       speaker: this.state.speaker,
       classYear: this.state.classYear,
       email: this.state.email,
-      content: this.state.content
+      original: this.state.original,
+      newText: this.state.newText
     }
     console.log("Creating a new speech: ", newSpeech);
     const newSpeechKey = database.ref().child('speeches').push().key;
@@ -41,8 +43,9 @@ class AmendmentForm extends Component {
       speaker: "",
       classYear: "",
       email: "",
-      content: ""
-    }, this.resetForm());
+      original: "",
+      newText: ""
+    });
     /* this.resetForm(() => {
      *   console.log("State is now: ", this.state);
      * }).bind(this);*/
@@ -52,7 +55,9 @@ class AmendmentForm extends Component {
       speaker: "",
       classYear: "",
       email: "",
-      content: ""
+      content: "",
+      original: "",
+      newText: ""
     });
   }
   render () {
@@ -86,12 +91,21 @@ class AmendmentForm extends Component {
           />
         </label>
         <label>
-          Content:
+          Original:
           <textarea
               onChange={this.handleChange}
               type="text"
-              name="content"
-              value={this.state.content}
+              name="original"
+              value={this.state.original}
+          />
+        </label>
+        <label>
+          New:
+          <textarea
+              onChange={this.handleChange}
+              type="text"
+              name="newText"
+              value={this.state.newText}
           />
         </label>
         <input type="submit" value="Submit" />

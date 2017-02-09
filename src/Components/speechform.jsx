@@ -26,6 +26,7 @@ class SpeechForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const newSpeech = {
+      formType: "Speech",
       speaker: this.state.speaker,
       classYear: this.state.classYear,
       email: this.state.email,
