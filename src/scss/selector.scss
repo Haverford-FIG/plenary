@@ -1,16 +1,10 @@
 .selector {
-  height: 80px;
+  height: 70px;
 
   .selectorContent {
     @include outer-container;
-    border-bottom: 6px solid $primary;
+    border-bottom: 3px solid $primary;
     height: 100%;
-  }
-
-  .logo {
-    display: inline-block;
-    height: 80px;
-    vertical-align: middle;
   }
 
   button {
@@ -30,7 +24,7 @@
 
   li {
     display: inline;
-    line-height: 80px;
+    line-height: 70px;
     margin-right: 20px;
     text-transform: uppercase;
   }
