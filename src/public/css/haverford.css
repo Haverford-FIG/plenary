@@ -676,6 +676,31 @@ nav {
     .speech .content:last-child {
       margin-right: 0; }
 
+.amendment {
+  margin-top: 30px;
+  display: block;
+  text-align: center; }
+  .amendment::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .amendment p {
+    text-align: left; }
+  .amendment .amendment-original {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .amendment .amendment-original:last-child {
+      margin-right: 0; }
+  .amendment .amendment-new {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .amendment .amendment-new:last-child {
+      margin-right: 0; }
+
 .quorumCounter {
   float: left;
   display: block;
