@@ -3,14 +3,15 @@ import Firebase from '../Firebase';
 
 const database = Firebase.database();
 
-class SpeechForm extends Component {
+class AmendmentForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      speaker: "",
+      speaker: "Amendment",
       classYear: "",
       email: "",
-      content: "",
+      original: "",
+      newText: "",
       error: ""
     }
     this.handleChange = this.handleChange.bind(this);
@@ -99,4 +100,4 @@ class SpeechForm extends Component {
   }
 }
 
-export default SpeechForm;
+export default AmendmentForm;
