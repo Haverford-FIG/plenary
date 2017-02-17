@@ -2,21 +2,8 @@ import React, { Component } from 'react';
 import Firebase from '../Firebase';
 import ui from '../FirebaseUI';
 
-const uiConfig = {
-  callbacks: {
-    signInSuccess: function(currentUser, credential, redirectUrl) {
-      console.log("HOLY FUCK I SIGNED IN CORRECTLY.");
-      console.log(currentUser);
-      return false;
-    }
-  },
-  signInFlow: 'popup',
-  signInOptions: [
-    // Leave the lines as is for the providers you want to offer your users.
-    Firebase.auth.EmailAuthProvider.PROVIDER_ID
-  ],
-  // Terms of service url.
-}
+const provider = new Firebase.auth.GoogleAuthProvider();
+
 
 class NavBar extends Component {
   constructor(props) {
@@ -35,18 +22,18 @@ class NavBar extends Component {
       }
     }.bind(this));
   }
-  componentWillMount() {
 
+  handleSignIn(event) {
+    event.preventDefault();
+    if(!this.state.loggedIn) {
+      
+      Firebase.auth().signInWithPopup(provider);
+    } else {
+      Firebase.auth().signOut();
+    }
   }
   render() {
-    const openAuthBox = ui.start('#firebaseui-auth-container', uiConfig);
-    const closeAuthBox = () => {
-      ui.reset();
-      Firebase.auth().signOut();
-    };
-    const loginButtonAction = this.state.loggedIn ?
-                              closeAuthBox.bind(this) :
-                              (() => {console.log("Unimplemented"); });
+
     return (
       <nav id="navbar">
         <div id="navbar-content">
@@ -58,12 +45,14 @@ class NavBar extends Component {
             <li><a>About</a></li>
             <li><a>Contact</a></li>
             <li >
-              <a>
+              <button onClick={this.handleSignIn.bind(this)}>
                 {this.state.loggedIn ? "Sign out" : "Sign in"}
-              </a>
+              </button>
             </li>
           </ul>
+
         </div>
+
       </nav>
     );
   }
