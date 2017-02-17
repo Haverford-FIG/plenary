@@ -26,7 +26,6 @@ class NavBar extends Component {
   handleSignIn(event) {
     event.preventDefault();
     if(!this.state.loggedIn) {
-      
       Firebase.auth().signInWithPopup(provider);
     } else {
       Firebase.auth().signOut();
@@ -50,9 +49,7 @@ class NavBar extends Component {
               </button>
             </li>
           </ul>
-
         </div>
-
       </nav>
     );
   }
