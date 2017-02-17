@@ -14,6 +14,7 @@ class App extends Component {
           <Quorum />
           <Updates />
         </main>
+        <div id="firebaseui-auth-container"></div>
       </div>
     );
   }

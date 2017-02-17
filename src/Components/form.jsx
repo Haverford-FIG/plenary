@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SpeechForm from '../Components/speechform';
-import AmendmentForm from '../Components/amendmentform.jsx';
+import AmendmentForm from '../Components/amendmentform';
+import ProcedureForm from '../Components/procedureform';
 
 const formTypes = ["Speech", "Amendment", "Procedure"];
 
@@ -38,8 +39,8 @@ class Form extends Component {
           return <SpeechForm />;
         case "Amendment":
           return <AmendmentForm />;
-        // case "Procedure":
-          //  return <ProcedureForm />;
+        case "Procedure":
+          return <ProcedureForm />;
         default:
           return <SpeechForm />;
       };

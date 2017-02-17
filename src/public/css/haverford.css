@@ -701,6 +701,9 @@ nav {
     .amendment .amendment-new:last-child {
       margin-right: 0; }
 
+.procedure {
+  text-align: center; }
+
 .quorumCounter {
   float: left;
   display: block;
