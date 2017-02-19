@@ -15,7 +15,7 @@ class NavBar extends Component {
     Firebase.auth().onAuthStateChanged(function(user) {
       console.log("Authentication state changed!!!");
       console.log("USER: ", user);
-      if(user && (user.email=="kliao@haverford.edu" || user.email=="jwparra@haverford.edu" || user.email=="jjennings@haverford.edu")) {
+      if(user && (user.email=="kliao@haverford.edu" || user.email=="jwparra@haverford.edu" || user.email=="jjennings@haverford.edu" || user.email=="tpepin@haverford.edu")) {
         this.setState({loggedIn: true});
       } else {
         this.setState({loggedIn: false});
