@@ -7,7 +7,7 @@ class Quorum extends Component {
         <h3>We are currently NOT at Quorum.</h3>
         <p>It is currently NOT constitutional for plenary to be in session.</p>
         <p>Today, the number of students required to reach and maintain quorum is:</p>
-        <h3>700</h3>
+        <h3>616</h3>
       </section>
     );
   }
